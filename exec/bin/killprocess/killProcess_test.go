@@ -62,6 +62,13 @@ func Test_killProcess(t *testing.T) {
 			exitMsg:  "java process not found",
 		},
 		{
+			name:    "httpd process not found",
+			args:			args{process: "httpd", mockChannel:mockChannel},
+			exitCode: 1,
+			exitMsg: "httpd process not found",
+
+		},
+		{
 			name:     "killProcessByLocalPortsSuccessfully",
 			args:     args{localPorts: "8080", mockChannel: mockChannel},
 			exitCode: 0,
